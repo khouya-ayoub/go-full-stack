@@ -9,7 +9,10 @@ var app = require('../app');
 // requests
 var request = require('supertest');
 
-describe('General syntax of the tests for our API', () => {
+/**
+ * Reference that helps to write your own test
+ * */
+describe('General syntax of the tests for our API :', () => {
     // first run the app before each test
     before((done) => {
         app.listen((err) => {
@@ -51,5 +54,31 @@ describe('General syntax of the tests for our API', () => {
         expect(5).to.not.equal(3);
         assert.equal(6,6,"6 its equal to 6");
         assert.typeOf('Heho', 'string');
+    });
+});
+
+/**
+ * Tests for user functions
+ * */
+describe("Tests for user functions :", () => {
+    before(done => {
+        app.listen(err => {
+            if (err) done(err);
+            done();
+        });
+    });
+    after(() => {
+        console.log("User functions tested well !")
+    });
+    // singup function
+    it('sign up function for the user', function (done) {
+        request(app)
+            .post('/api/auth/signup')
+            .send({ login: 'testback', password: 'testback' })
+            .expect(200)
+            .end((err, res) => {
+                if (err) done(err);
+                done();
+            });
     });
 });
