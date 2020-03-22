@@ -13,6 +13,8 @@ const bodyParser = require('body-parser');
 const databaseRouters = require('./routes/data-base');
 // import user router
 const userRouters = require('./routes/user');
+// import test router
+const testRouter = require('./routes/test');
 
 // init app
 const app = express();
@@ -32,6 +34,8 @@ app.use(bodyParser.json());
 app.use('/api/db', databaseRouters);
 // use the roots of user
 app.use('/api/auth', userRouters);
+// test root
+app.use('/test', testRouter);
 
 // export the app
 module.exports = app;

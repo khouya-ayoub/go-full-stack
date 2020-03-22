@@ -1,5 +1,5 @@
 /**
- * This file contains the routes for roots that manipulate the data base.
+ * This file contains the main file of the server.
  * Please be careful when you change something or you add something, and please
  * add a commenter line that describe your code you had added, and if you can
  * add a test-script for your code in the folder ../tests/tests_---.js.
