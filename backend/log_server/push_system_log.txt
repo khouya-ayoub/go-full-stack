@@ -1,0 +1,37 @@
+Sun Mar 22 2020 22:24:57 GMT+0100 (GMT+01:00) | src: C:\angular\go-full-stack\backend\controllers\data-base.js login() | msg: login successfully : khouya
+Sun Mar 22 2020 22:27:23 GMT+0100 (GMT+01:00) | src: C:\angular\go-full-stack\backend\controllers\data-base.js login() | msg: login successfully : khouya
+Sun Mar 22 2020 22:29:48 GMT+0100 (GMT+01:00) | src: C:\angular\go-full-stack\backend\controllers\data-base.js login() | msg: login successfully : khouya
+Sun Mar 22 2020 22:33:08 GMT+0100 (GMT+01:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signup() | msg: error while creating a new user !
+Sun Mar 22 2020 22:33:21 GMT+0100 (GMT+01:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signup() | msg: error while creating a new user !
+Sun Mar 22 2020 22:34:44 GMT+0100 (GMT+01:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signup() | msg: error while creating a new user !
+Sun Mar 22 2020 22:35:06 GMT+0100 (GMT+01:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signup() | msg: error while creating a new user !
+Sun Mar 22 2020 22:38:01 GMT+0100 (GMT+01:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signup() | msg: error while creating a new user !
+Sun Mar 22 2020 22:41:08 GMT+0100 (GMT+01:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signup() | msg: error while creating a new user !
+Sun Mar 22 2020 22:42:09 GMT+0100 (GMT+01:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signup() | msg: error while creating a new user !
+Sun Mar 22 2020 22:44:42 GMT+0100 (GMT+01:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signup() | msg: error while creating a new user !
+Sun Mar 22 2020 22:47:32 GMT+0100 (GMT+01:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signup() | msg: error while creating a new user !
+Sun Mar 22 2020 22:48:50 GMT+0100 (GMT+01:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signup() | msg: error while creating a new user !
+Sun Mar 22 2020 22:53:35 GMT+0100 (GMT+01:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signup() | msg: user created successfully : backend
+Sun Mar 22 2020 22:54:06 GMT+0100 (GMT+01:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signup() | msg: user created successfully : backend
+Sun Mar 22 2020 22:56:23 GMT+0100 (GMT+01:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signup() | msg: user created successfully : backend
+Sun Mar 22 2020 23:08:18 GMT+0100 (GMT+01:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signup() | msg: user created successfully : backend
+Sun Mar 22 2020 23:08:44 GMT+0100 (GMT+01:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signup() | msg: user created successfully : backend
+Sun Mar 22 2020 23:09:34 GMT+0100 (GMT+01:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signup() | msg: user created successfully : backend
+Sun Mar 22 2020 23:10:34 GMT+0100 (GMT+01:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signup() | msg: user created successfully : backend
+Sun Mar 22 2020 23:10:42 GMT+0100 (GMT+01:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signup() | msg: user created successfully : backend
+Sun Mar 22 2020 23:12:34 GMT+0100 (GMT+01:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signup() | msg: user created successfully : backend
+Sun Mar 22 2020 23:12:34 GMT+0100 (GMT+01:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : backend
+Sun Mar 22 2020 23:20:19 GMT+0100 (GMT+01:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signup() | msg: user created successfully : backend
+Sun Mar 22 2020 23:20:19 GMT+0100 (GMT+01:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : backend
+Mon Mar 23 2020 00:17:52 GMT+0100 (GMT+01:00) | src: C:\angular\go-full-stack\backend\controllers\notification.js getMyNotifications() | msg: Error while searching for notifications for the user undefined
+Mon Mar 23 2020 00:19:11 GMT+0100 (GMT+01:00) | src: C:\angular\go-full-stack\backend\controllers\notification.js getMyNotifications() | msg: Error while searching for notifications for the user undefined
+Mon Mar 23 2020 00:19:48 GMT+0100 (GMT+01:00) | src: C:\angular\go-full-stack\backend\controllers\notification.js getMyNotifications() | msg: Error while searching for notifications for the user undefined
+Mon Mar 23 2020 00:20:32 GMT+0100 (GMT+01:00) | src: C:\angular\go-full-stack\backend\controllers\notification.js getMyNotifications() | msg: The user undefined has asked for his notifications 
+Mon Mar 23 2020 00:30:11 GMT+0100 (GMT+01:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signup() | msg: user created successfully : backend
+Mon Mar 23 2020 00:30:12 GMT+0100 (GMT+01:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : backend
+Mon Mar 23 2020 00:30:36 GMT+0100 (GMT+01:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signup() | msg: user created successfully : backend
+Mon Mar 23 2020 00:30:36 GMT+0100 (GMT+01:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : backend
+Mon Mar 23 2020 00:30:36 GMT+0100 (GMT+01:00) | src: C:\angular\go-full-stack\backend\controllers\notification.js getMyNotifications() | msg: The user 2 has asked for his notifications 
+Mon Mar 23 2020 00:30:54 GMT+0100 (GMT+01:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signup() | msg: user created successfully : backend
+Mon Mar 23 2020 00:30:54 GMT+0100 (GMT+01:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : backend
+Mon Mar 23 2020 00:30:54 GMT+0100 (GMT+01:00) | src: C:\angular\go-full-stack\backend\controllers\notification.js getMyNotifications() | msg: The user 2 has asked for his notifications 

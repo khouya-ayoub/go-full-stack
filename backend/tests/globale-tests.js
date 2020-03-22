@@ -8,6 +8,8 @@ var assert = require('chai').assert;
 var app = require('../app');
 // requests
 var request = require('supertest');
+// import bcrypt
+var bcrypt = require('bcrypt');
 
 /**
  * Reference that helps to write your own test
@@ -23,7 +25,7 @@ describe('General syntax of the tests for our API :', () => {
 
     // After all tests are done
     after(() => {
-        console.log("All tests for General syntax section are done !");
+        console.log("    All tests for General syntax section are done !");
     });
 
     it('Test of a POST method', function (done) {
@@ -68,17 +70,53 @@ describe("Tests for user functions :", () => {
         });
     });
     after(() => {
-        console.log("User functions tested well !")
+        console.log("    User functions test done !")
     });
     // singup function
     it('sign up function for the user', function (done) {
         request(app)
             .post('/api/auth/signup')
-            .send({ login: 'testback', password: 'testback' })
+            .send({ login: 'backend', password: 'backend' })
             .expect(200)
             .end((err, res) => {
                 if (err) done(err);
                 done();
             });
+    });
+    // signin function
+    it('sign in function for the user', function (done) {
+        request(app)
+            .post('/api/auth/signin')
+            .send({ login: 'backend', password: 'backend' })
+            .expect(200)
+            .end((err, res) => {
+                if (err) done(err);
+                done();
+            })
+    });
+});
+
+/**
+ * Test for Notifications functions
+ * */
+describe("Test for notifications functions :", () => {
+    before(done => {
+        app.listen(err => {
+            if (err) done(err);
+            done();
+        });
+    });
+    after(() => {
+        console.log("    Notification functions test done !")
+    });
+    it('get my notifications from database', function (done) {
+        request(app)
+            .post('/api/notification/getnotifs')
+            .send({ idUser: 2 })
+            .expect(200)
+            .end((err, res) => {
+                if (err) done(err);
+                done();
+            })
     });
 });
