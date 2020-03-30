@@ -15,7 +15,7 @@ const databaseController = require('../controllers/data-base');
 const authMiddleware = require('../middleware/auth');
 
 // Request for authentication to the system
-router.get('/:login/:password', authMiddleware, databaseController.login);
+router.post('/', authMiddleware, databaseController.login);
 
 /**
  * Export the router

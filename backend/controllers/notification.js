@@ -1,5 +1,11 @@
 const conn = require('./connexion').connexion;
 const log = require('../log_server/log_server');
+const webpush = require('web-push');
+
+// TODO :
+const publicVapidKey  =  "BJthRQ5myDgc7OSXzPCMftGw-n16F7zQBEN7EUD6XxcfTTvrLGWSIG7y_JxiWtVlCFua0S8MTB5rPziBqNx1qIo";
+const privateVapidKey =  "3KzvKasA2SoCxsp0iIG_o9B0Ozvl1XDwI63JRKNIWBM";
+webpush.setVapidDetails("mailto:",publicVapidKey,privateVapidKey);
 
 const notif_functions = {
     getMyNotifications : (request, response, next) => {
@@ -17,6 +23,45 @@ const notif_functions = {
             log(__filename + " getMyNotifications()", "The user " + request.body.idUser + " has asked for his notifications ");
             return response.status(200).json(res);
         });
+    },
+    subscribeUser : (request, response, next) => {
+        const subscription = request.body;
+        response.status(201).json({ message: "MOI Serveur !" });
+        const payload = JSON.stringify({
+            title: "Back End Say HELLO",
+            description: "SERVER"
+        });
+        //////////////////////////////////////////////
+        webpush.sendNotification(subscription, payload)
+            .catch(err => {
+                console.log(err)
+            });
+        ////////////////////////////////////////////////
+        setTimeout(() => {
+                webpush.sendNotification(subscription,
+                    JSON.stringify({
+                        title: "Apres 10 secs !",
+                        description: "Apres "
+                    })
+                    )
+                    .catch(err => {
+                        console.log(err)
+                    });
+        },
+            10000);
+        /////////////////////////////////////////////
+        setTimeout(() => {
+                webpush.sendNotification(subscription,
+                    JSON.stringify({
+                        title: "APRES !",
+                        description: "APRES "
+                    })
+                )
+                    .catch(err => {
+                        console.log(err)
+                    });
+            },
+            30000);
     }
 }
 

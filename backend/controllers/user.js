@@ -37,21 +37,21 @@ const user_functions = {
     signin: (request, response, next) => {
         // first look for the user login
         let sql = "SELECT * FROM mb_users WHERE mus_login = ?";
-        conn.query(sql, [request.body.login], (err, res) => {
+        conn.query(sql, [request.body.email], (err, res) => {
             // check if there is a login in the database
             if (err || (res.length === 0)) {
                 log(__filename + " signin()", "try to get unexcited user");
                 return response.status(400).json({ error: 'error ' + err, message: 'No user !'});
             }
             // compare two passwords
-            bcrypt.compare(request.body.password, res[0].MUS_PASSWORD)
+            bcrypt.compare(request.body.motdepass, res[0].MUS_PASSWORD)
                 .then(valid => {
                     // if the two password are not equal
                     if (!valid) {
-                        log(__filename + " signin()", "password incorrect for : " + request.body.login);
+                        log(__filename + " signin()", "password incorrect for : " + request.body.email);
                         return response.status(400).json({ error: 'error ', message: 'Password incorrect !'});
                     }
-                    log(__filename + " signin()", "user connected successfully with the following login : " + request.body.login);
+                    log(__filename + " signin()", "user connected successfully with the following login : " + request.body.email);
                     return response.status(200).json({
                         _userId: res[0].MUS_IDUSER,
                         token: jwt.sign(
