@@ -10,9 +10,12 @@
 const db_conn = require('./connexion');
 const log = require('../log_server/log_server');
 const json = require('json');
+const subscriptionModel = require('../models/subscription.model');
+const notificationModel = require('../models/notification.model');
 
 // the connexion
 const conn = db_conn.connexion;
+
 
 const database_functions = {
     login: (request, response, next) => {
@@ -46,11 +49,90 @@ const database_functions = {
             }
         });
     },
-    checkForNotification: () => {
+    saveSubscription: (subscription) => {
         /**
-         * TODO: description of this function
+         * This function save the given subscription
          * */
-
+        let sql = "INSERT INTO mb_subscribe(id_user,endpoint,auth,p256dh) values(?,?,?,?)";
+        conn.query(sql, [subscription.idUser, subscription.subNot.endpoint, subscription.subNot.keys.auth, subscription.subNot.keys.p256dh], (err, res) => {
+            if (err || (res.length === 0))  {
+                console.log("Errreur insertion :" + err);
+            } else {
+                console.log(" insertion réussite ");
+            }
+        })
+    },
+    getSubscriptions: (idUser, callback) => {
+        /**
+         * todo:
+         * */
+        let sql = "SELECT endpoint, auth, p256dh from MB_SUBSCRIBE where id_user = ?";
+        conn.query(sql, [idUser], (err, res) => {
+            if(err || res.length === 0) {
+                console.log(err);
+            }
+            else{
+                let listSubscriptions = new Array();
+                for (let indice = 0; indice < res.length; indice ++) {
+                    listSubscriptions.push(subscriptionModel.createSubrcription(res[indice].endpoint, res[indice].auth, res[indice].p256dh));
+                }
+                callback(listSubscriptions);
+            }
+        });
+    },
+    getNotifications: (idUser, callback) => {
+        /**
+         * Todo :
+         * */
+        let sql = "SELECT mno_titre, mno_description FROM mb_notifications N, mb_envoie E" +
+            " WHERE E.men_iduser = ? AND N.mno_idnotification = E.men_idnotification and E.men_etatread = 0";
+        conn.query(sql, [idUser], (err, res) => {
+            if(err || res.length === 0) {
+                console.log(err);
+            }
+            else{
+                let listNotifications = new Array();
+                for (let i = 0; i < res.length; i++) {
+                    listNotifications.push(notificationModel.createNotification(res[i].mno_titre, res[i].mno_description));
+                }
+                callback(listNotifications);
+            }
+        });
+    },
+    promiseGetNotifications: (idUser) => {
+        return new Promise((resolve, reject) => {
+            let sql = "SELECT mno_titre, mno_description FROM mb_notifications N, mb_envoie E" +
+                " WHERE E.men_iduser = ? AND N.mno_idnotification = E.men_idnotification and E.men_etatread = 0";
+            conn.query(sql, [idUser], (err, res) => {
+                if(err || res.length === 0) {
+                    console.log(err);
+                }
+                else{
+                    let listNotifications = new Array();
+                    for (let i = 0; i < res.length; i++) {
+                        listNotifications.push(notificationModel.createNotification(res[i].mno_titre, res[i].mno_description));
+                    }
+                    resolve(listNotifications);
+                }
+            });
+        });
+    },
+    promiseGetSubscription: (idUser) => {
+        return new Promise((resolve, reject) => {
+            let sql = "SELECT endpoint, auth, p256dh from MB_SUBSCRIBE where id_user = ?";
+            conn.query(sql, [idUser], (err, res) => {
+                if(err || res.length === 0) {
+                    console.log(err);
+                }
+                else{
+                    let listSubscriptions = new Array();
+                    for (let indice = 0; indice < res.length; indice ++) {
+                        listSubscriptions.push(subscriptionModel.createSubrcription(res[indice].endpoint, res[indice].auth, res[indice].p256dh));
+                    }
+                    resolve(listSubscriptions);
+                }
+            });
+        });
     }
 };
 

@@ -17,6 +17,8 @@ const userRouters = require('./routes/user');
 const testRouter = require('./routes/test');
 // import notification router
 const notificationRouter = require('./routes/notification');
+// todo
+const internRouter = require('./routes/intern-routes');
 
 // init app
 const app = express();
@@ -42,6 +44,8 @@ app.use('/api/auth', userRouters);
 app.use('/test', testRouter);
 // notification routes
 app.use('/api/notification', notificationRouter);
+// interne routes
+app.use('/api/intern-routes', internRouter);
 
 
 /**

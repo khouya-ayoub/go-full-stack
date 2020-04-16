@@ -16,6 +16,7 @@ const authMiddleware = require('../middleware/auth');
 
 // Request for authentication to the system
 router.post('/', authMiddleware, databaseController.login);
+router.post('savesubscription', );
 
 /**
  * Export the router
