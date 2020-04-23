@@ -53,7 +53,7 @@ const database_functions = {
         /**
          * This function save the given subscription
          * */
-        let sql = "INSERT INTO mb_subscribe(id_user,endpoint,auth,p256dh) values(?,?,?,?)";
+        let sql = "INSERT INTO mb_subscriptions(MSU_IDUSER,MSU_ENDPOINT,MSU_AUTH,MSU_P256DH) values(?,?,?,?)";
         conn.query(sql, [subscription.idUser, subscription.subNot.endpoint, subscription.subNot.keys.auth, subscription.subNot.keys.p256dh], (err, res) => {
             if (err || (res.length === 0))  {
                 console.log("Errreur insertion :" + err);
@@ -101,8 +101,8 @@ const database_functions = {
     },
     promiseGetNotifications: (idUser) => {
         return new Promise((resolve, reject) => {
-            let sql = "SELECT mno_titre, mno_description FROM mb_notifications N, mb_envoie E" +
-                " WHERE E.men_iduser = ? AND N.mno_idnotification = E.men_idnotification and E.men_etatread = 0";
+            let sql = "SELECT E.men_idnotification, mno_titre, mno_description FROM mb_notifications N, mb_envoie E" +
+                " WHERE E.men_iduser = ? AND N.mno_idnotification = E.men_idnotification and E.men_etatenvoie = 0";
             conn.query(sql, [idUser], (err, res) => {
                 if(err || res.length === 0) {
                     console.log(err);
@@ -111,6 +111,7 @@ const database_functions = {
                     let listNotifications = new Array();
                     for (let i = 0; i < res.length; i++) {
                         listNotifications.push(notificationModel.createNotification(res[i].mno_titre, res[i].mno_description));
+                        database_functions.changeEtatEnvoieNotification(idUser, res[i].men_idnotification).then(() => {});
                     }
                     resolve(listNotifications);
                 }
@@ -119,7 +120,7 @@ const database_functions = {
     },
     promiseGetSubscription: (idUser) => {
         return new Promise((resolve, reject) => {
-            let sql = "SELECT endpoint, auth, p256dh from MB_SUBSCRIBE where id_user = ?";
+            let sql = "SELECT MSU_ENDPOINT, MSU_AUTH, MSU_P256DH from mb_subscriptions where MSU_IDUSER = ?";
             conn.query(sql, [idUser], (err, res) => {
                 if(err || res.length === 0) {
                     console.log(err);
@@ -127,11 +128,55 @@ const database_functions = {
                 else{
                     let listSubscriptions = new Array();
                     for (let indice = 0; indice < res.length; indice ++) {
-                        listSubscriptions.push(subscriptionModel.createSubrcription(res[indice].endpoint, res[indice].auth, res[indice].p256dh));
+                        listSubscriptions.push(subscriptionModel.createSubrcription(res[indice].MSU_ENDPOINT, res[indice].MSU_AUTH, res[indice].MSU_P256DH));
                     }
                     resolve(listSubscriptions);
                 }
             });
+        });
+    },
+    promiseGetEtatSubscription: (idUser) => {
+      return new Promise( (resolve, reject) => {
+         let sql = "SELECT MUS_ETATSUBSCRIPTION FROM mb_users WHERE MUS_IDUSER = ?";
+         conn.query(sql, [idUser], (err, res) => {
+            if(err || res.length === 0){
+                console.log(err);
+                resolve(false);
+            }
+            if (res[0].MUS_ETATSUBSCRIPTION === 1){
+                resolve(true);
+            } else {
+                console.log(res);
+                resolve(false);
+            }
+         });
+      });
+    },
+    changeEtatEnvoieNotification: (idUser, idNotification) => {
+        return new Promise((resolve, reject) => {
+            /**
+             * todo :
+             * */
+            let sql = "UPDATE mb_envoie set men_etatenvoie = 1 where men_iduser = ? AND men_idnotification = ?";
+            conn.query(sql, [idUser, idNotification], (err, res) => {
+                if (err || (res.length === 0))  {
+                    reject();
+                } else {
+                    resolve();
+                }
+            });
+        })
+    },
+    changeStateOfSubscription: (request, response, next) => {
+        let sql = "UPDATE mb_users set mus_etatsubscription = ? where mus_iduser = ?";
+        conn.query(sql, [request.body.etatsub, request.body.idUser], (err,res) => {
+            if(err || res.length === 0){
+                console.log(err);
+                return response.status(400).json( {message: 'erreur de modification', state: false } );
+            }
+            else{
+                return response.status(200).json( {message: 'modification réussite', state: true});
+            }
         });
     }
 };

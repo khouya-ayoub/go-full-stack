@@ -16,6 +16,7 @@ const authMiddleware = require('../middleware/auth');
 
 // Request for authentication to the system
 router.post('/', authMiddleware, databaseController.login);
+router.post('/modif-state-sub', databaseController.changeStateOfSubscription);
 router.post('savesubscription', );
 
 /**

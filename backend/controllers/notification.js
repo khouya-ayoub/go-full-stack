@@ -13,9 +13,8 @@ const notif_functions = {
         const idUser = request.body.idUser;
         const subscription = request.body.subNot;
 
-        //databaseController.saveSubscription(request.body);
+        databaseController.saveSubscription(request.body);
 
-        notif_functions.sendNotificationToUsers(2);
 
         const payload = JSON.stringify({
             title: "SUBSCRIPTION",
@@ -26,33 +25,42 @@ const notif_functions = {
                 console.log(err)
             });
     },
-    sendNotificationToUsers: (id_user) => {
+    sendNotificationToUsers: (request, response, next) => {
         // todo : send notification to user
         webpush.setVapidDetails("mailto:",publicVapidKey, privateVapidKey);
 
-        Promise.all([databaseController.promiseGetNotifications(id_user), databaseController.promiseGetSubscription(id_user)])
-            .then((values) => {
-                let listNotifications = [];
-                let listSubscriptions = [];
+        databaseController.promiseGetEtatSubscription(request.body.cible)
+            .then(res => {
+                if(res){
+                    console.log("---------------------------------------------------------------------");
+                    Promise.all([databaseController.promiseGetNotifications(request.body.cible), databaseController.promiseGetSubscription(request.body.cible)])
+                        .then((values) => {
+                            let listNotifications = [];
+                            let listSubscriptions = [];
 
-                listNotifications = values[0];
-                listSubscriptions = values[1];
+                            listNotifications = values[0];
+                            listSubscriptions = values[1];
 
-                if (listSubscriptions.length === 0 || listNotifications.length === 0) {
-                    console.log("Rien à envoyer !");
+                            console.log(listNotifications);
+                            console.log(listSubscriptions);
+
+                            if (listSubscriptions.length === 0 || listNotifications.length === 0) {
+                                console.log("Rien à envoyer !");
+                            }
+                            else {
+                                for (let not = 0; not < listNotifications.length; not ++) {
+                                    for (let sub = 0; sub < listSubscriptions.length; sub ++) {
+                                        webpush.sendNotification(listSubscriptions[sub], JSON.stringify(listNotifications[not]))
+                                            .catch(err => {
+                                                console.log(err);
+                                            });
+                                    }
+                                }
+                            }
+
+                        });
                 }
-                else {
-                    for (let not = 0; not < listNotifications.length; not ++) {
-                        for (let sub = 0; sub < listSubscriptions.length; sub ++) {
-                            webpush.sendNotification(listSubscriptions[sub], JSON.stringify(listNotifications[not]))
-                                .catch(err => {
-                                    console.log(err);
-                                });
-                        }
-                    }
-                }
-
-            });
+        });
     }
 };
 
