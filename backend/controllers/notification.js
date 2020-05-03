@@ -17,8 +17,8 @@ const notif_functions = {
 
 
         const payload = JSON.stringify({
-            title: "SUBSCRIPTION",
-            description: "SUBSCRIPTION AU SERVICE"
+            title: "SOUSCRIPTION",
+            description: "SOUSCRIPTION AU SERVICE"
         });
         webpush.sendNotification(subscription, payload)
             .catch(err => {
@@ -28,10 +28,9 @@ const notif_functions = {
     sendNotificationToUsers: (request, response, next) => {
         // todo : send notification to user
         webpush.setVapidDetails("mailto:",publicVapidKey, privateVapidKey);
-
         databaseController.promiseGetEtatSubscription(request.body.cible)
             .then(res => {
-                if(res){
+                    console.log("ici--2");
                     console.log("---------------------------------------------------------------------");
                     Promise.all([databaseController.promiseGetNotifications(request.body.cible), databaseController.promiseGetSubscription(request.body.cible)])
                         .then((values) => {
@@ -59,7 +58,7 @@ const notif_functions = {
                             }
 
                         });
-                }
+                
         });
     }
 };

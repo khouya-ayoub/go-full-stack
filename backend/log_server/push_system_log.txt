@@ -276,3 +276,87 @@ Fri May 01 2020 04:29:25 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\ba
 Fri May 01 2020 04:29:49 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : hhamza
 Fri May 01 2020 04:30:29 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : hhamza
 Fri May 01 2020 04:34:51 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : hhamza
+Fri May 01 2020 04:59:33 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : hhamza
+Fri May 01 2020 05:59:41 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : hhamza
+Fri May 01 2020 06:09:24 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : hhamza
+Fri May 01 2020 07:08:45 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\data-base.js signup() | msg: error while creating a new user !
+Fri May 01 2020 07:09:38 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\data-base.js signup() | msg: error while creating a new user !
+Fri May 01 2020 07:10:30 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\data-base.js signup() | msg: error while creating a new user !
+Fri May 01 2020 07:12:27 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\data-base.js signup() | msg: error while creating a new user !
+Fri May 01 2020 07:12:39 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\data-base.js signup() | msg: error while creating a new user !
+Fri May 01 2020 07:13:19 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\data-base.js signup() | msg: user created successfully : angular
+Fri May 01 2020 07:30:45 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: password incorrect for : hhamza
+Fri May 01 2020 07:30:50 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : hhamza
+Fri May 01 2020 07:36:58 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : hhamza
+Fri May 01 2020 07:40:06 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : hhamza
+Fri May 01 2020 07:41:03 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : hhamza
+Fri May 01 2020 07:42:57 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : hhamza
+Fri May 01 2020 07:54:43 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : hhamza
+Fri May 01 2020 07:55:37 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : hhamza
+Fri May 01 2020 08:01:16 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : hhamza
+Fri May 01 2020 08:01:56 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : hhamza
+Fri May 01 2020 08:04:40 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : hhamza
+Fri May 01 2020 08:06:25 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : hhamza
+Sat May 02 2020 00:21:42 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : bsalma
+Sat May 02 2020 00:22:43 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : hhamza
+Sat May 02 2020 03:05:12 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : hhamza
+Sat May 02 2020 03:08:48 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : hhamza
+Sat May 02 2020 03:12:34 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : hhamza
+Sat May 02 2020 03:12:52 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : bsalma
+Sun May 03 2020 04:35:02 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 04:36:32 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 04:37:57 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 04:45:25 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 04:46:10 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 04:48:20 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 04:52:37 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 05:00:32 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 05:03:05 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 05:06:39 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 05:07:35 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 05:08:03 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 05:10:21 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 05:10:52 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 05:11:32 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 05:12:31 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 05:13:31 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 05:17:53 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 05:18:16 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 05:18:38 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 05:20:15 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 05:23:16 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 05:23:52 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 05:26:14 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 05:27:16 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 05:28:59 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 05:30:55 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 05:32:25 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 05:33:51 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 05:34:10 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 05:34:25 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 05:35:34 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 05:36:13 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 05:56:13 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 05:59:44 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 06:12:42 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 06:13:45 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 06:14:12 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 06:16:22 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 06:17:28 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 06:19:26 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 06:20:28 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 06:21:02 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 06:22:00 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 06:23:36 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 06:24:03 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 06:24:25 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 06:28:07 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 06:29:54 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 06:30:50 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 06:31:46 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 06:33:52 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 06:34:41 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 06:36:29 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 06:36:50 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 06:42:34 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr
+Sun May 03 2020 06:52:49 GMT+0200 (GMT+02:00) | src: C:\angular\go-full-stack\backend\controllers\user.js signin() | msg: user connected successfully with the following login : admin@cermix.fr

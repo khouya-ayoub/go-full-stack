@@ -44,8 +44,6 @@ app.use('/api/auth', userRouters);
 app.use('/test', testRouter);
 // notification routes
 app.use('/api/notification', notificationRouter);
-// interne routes
-app.use('/api/intern-routes', internRouter);
 
 
 /**

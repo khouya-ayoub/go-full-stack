@@ -9,7 +9,7 @@
 // import db_connexion module and all required modules
 const db_conn = require('./connexion');
 const log = require('../log_server/log_server');
-const json = require('json');
+const bcrypt = require('bcrypt');
 const subscriptionModel = require('../models/subscription.model');
 const notificationModel = require('../models/notification.model');
 
@@ -60,7 +60,7 @@ const database_functions = {
             } else {
                 console.log(" insertion réussite ");
             }
-        })
+        });
     },
     getSubscriptions: (idUser, callback) => {
         /**
@@ -178,6 +178,68 @@ const database_functions = {
                 return response.status(200).json( {message: 'modification réussite', state: true});
             }
         });
+    },
+    addNotification: (request, response, next) => {
+        let notif = request.body;
+        let sql = "INSERT INTO mb_notifications(MNO_TITRE, MNO_DESCRIPTION, MNO_TYPE, MNO_CIBLE, MNO_QUICREAT, MNO_DATECREAT) values(?,?,?,?,?,?)";
+        conn.query(sql, [notif.titre, notif.description, notif.type, notif.cible, notif.qui, notif.date], (err, res) => {
+            if (err || (res.length === 0))  {
+                console.log("Errreur insertion :" + err);
+            } else {
+                console.log(" insertion réussite ");
+            }
+        })
+    },
+    addUser: (request, response, next) => {
+        // first thing crypt the password
+        bcrypt.hash(request.body.password, 10)
+            .then(hash => {
+                let user = request.body;
+                // when the password is crypted successfully
+                let sql ="INSERT INTO mb_users (MUS_NOM, MUS_PRENOM, MUS_LOGIN, MUS_PASSWORD, MUS_GROUP, MUS_QUICREAT, MUS_DATECREAT) values(?)";
+                let values = [user.nom,user.prenom,user.login,hash, user.group,user.qui,user.date];
+                conn.query(sql, [values], (err, res) => {
+                    if (err || res.affectedRows === 0) {
+                        log(__filename + " signup()", "error while creating a new user !");
+                        console.log(err);
+                        return response.status(400).json({ error: 'error ' + err, message: 'error'});
+                    } else {
+                        log(__filename + " signup()", "user created successfully : " + request.body.login);
+                        return response.status(200).json({
+                            status: '200',
+                            message: 'User created successfully !'
+                        });
+                    }
+                });
+            })
+            .catch(error => response.status(500).json({
+                error
+            }));
+    },
+    getUserNotifications: (request, response, next) => {
+        let sql = "SELECT men_idnotification, mno_titre, mno_description FROM mb_notifications N, mb_envoie E WHERE E.men_iduser = ? AND N.mno_idnotification = E.men_idnotification and E.men_etatread = 0";
+        conn.query(sql, [request.body.idUser], (err, res) => {
+            if(err || res.length === 0) {
+                console.log(err);
+                return response.status(500).json({ error: 'error ' + err, message: 'error'});
+            }
+            else{
+                return response.status(200).json({ message: 'bien recu', notifications: res });
+            }
+        });
+    },
+    chageStateRead: (request, response, next) => {
+        let sql = "UPDATE MB_ENVOIE set MEN_ETATREAD = 1 WHERE MEN_IDNOTIFICATION = ? AND  MEN_IDUSER = ?";
+        conn.query(sql, [request.body.idNotif, request.body.idUser], (err, res) => {
+            if(err || res.length === 0) {
+                console.log(err);
+                return response.status(500).json({ error: 'error ' + err, message: 'error'});
+            }
+            else{
+                return response.status(200).json({ message: 'bien recu'});
+            }
+        });
+
     }
 };
 
